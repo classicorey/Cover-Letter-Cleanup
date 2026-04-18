@@ -54,8 +54,9 @@ x ="{Company}"
 t = re.compile(x)
 #Ask the user for the company they're applying to.
 r = input('Enter the name of the Company:   ')
+rNoSpace = r.replace(" ","")
 #Add the company name to the end of the cover letter filepath to create a copy instead of overriding the template.
-newSaveFilename = r"C:\Users\Corey Crooks\OneDrive\zJobSearch\2026CoverLetter" + r
+newSaveFilename = r"C:\Users\Corey Crooks\OneDrive\zJobSearch\2026CoverLetter" + rNoSpace
 #Replace the {Company} placeholder with the user input.
 myreplace(document, t, r)
 
