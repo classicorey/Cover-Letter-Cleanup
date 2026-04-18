@@ -42,13 +42,13 @@ day = now.strftime("%d")
 month = now.strftime("%B")
 #Get the year in four numbers ie 2026.
 year = now.strftime("%Y")
-#Set the replacer variable to the full date string ie April 17, 2026
+#Set the replacer variable to the full date string ie April 17, 2026.
 r = month + " " + day + ", " + year
 
 #Replace {Date} with the current date.
 myreplace (document, t, r)
 
-#Key into the {Company} placeholder
+#Key into the {Company} placeholder.
 x ="{Company}"
 #Turn it into a useable string.
 t = re.compile(x)
