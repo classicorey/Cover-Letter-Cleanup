@@ -11,3 +11,12 @@ t = re.compile(x)
 r = input('Enter the name of the Company:   ')
 
 newSaveFilename = r"C:\Users\Corey Crooks\OneDrive\zJobSearch\2026CoverLetter" + r
+
+myreplace(document, t, r)
+
+x ="{Position}"
+t = re.compile(x)
+
+r = input('Enter the position you are applying for:   ')
+
+myreplace(document, t, r)
