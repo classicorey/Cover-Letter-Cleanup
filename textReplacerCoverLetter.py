@@ -6,6 +6,21 @@ from datetime import datetime
 filename = r"C:\Users\Corey Crooks\OneDrive\zJobSearch\2026CoverLetter.docx"
 document = Document(filename)
 
+def myreplace(file, regex, replace):
+    for p in file.paragraphs:
+        if regex.search(p.text):
+            inline=p.runs
+
+            for i in range (len(inline)):
+                if regex.search(inline[i].text):
+                    text=regex.sub(replace, inline[i].text)
+                    inline[i].text=text
+
+    for table in file.tables:
+        for row in table.rows:
+            for cell in row.cells:
+                myreplace(cell,regex,replace)
+
 x ="{Company}"
 t = re.compile(x)
 r = input('Enter the name of the Company:   ')
