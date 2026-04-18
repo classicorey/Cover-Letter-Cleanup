@@ -21,6 +21,19 @@ def myreplace(file, regex, replace):
             for cell in row.cells:
                 myreplace(cell,regex,replace)
 
+now = datetime.now()
+
+#  Month Day, Year
+x = "{Date}"
+t = re.compile(x)
+day = now.strftime("%d")
+month = now.strftime("%B")
+year = now.strftime("%Y")
+r = month + " " + day + ", " + year
+
+myreplace (document, t, r)
+
+
 x ="{Company}"
 t = re.compile(x)
 r = input('Enter the name of the Company:   ')
@@ -35,7 +48,6 @@ t = re.compile(x)
 r = input('Enter the position you are applying for:   ')
 
 myreplace(document, t, r)
-
 
 document.save(newSaveFilename + ".docx")
 convert(newSaveFilename+ ".docx", newSaveFilename + ".pdf")
