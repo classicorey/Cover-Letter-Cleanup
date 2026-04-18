@@ -54,6 +54,8 @@ x ="{Company}"
 t = re.compile(x)
 #Ask the user for the company they're applying to.
 r = input('Enter the name of the Company:   ')
+#Add a variant of the company user input that contains no spaces.
+#Use this variant for the new file name.
 rNoSpace = r.replace(" ","")
 #Add the company name to the end of the cover letter filepath to create a copy instead of overriding the template.
 newSaveFilename = r"C:\Users\Corey Crooks\OneDrive\zJobSearch\2026CoverLetter" + rNoSpace
