@@ -20,3 +20,8 @@ t = re.compile(x)
 r = input('Enter the position you are applying for:   ')
 
 myreplace(document, t, r)
+
+
+document.save(newSaveFilename + ".docx")
+convert(newSaveFilename+ ".docx", newSaveFilename + ".pdf")
+print('Text is replaced, and document is saved.')
